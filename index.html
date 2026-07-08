@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalraj S - Software Engineer | Portfolio</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=4AAzIa20OagD&format=png&color=000000" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Custom Cursor Elements -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    
+    <div id="scroll-progress"></div>
+    <main id="main">
+        <!-- RESPONSIVE NAVIGATION -->
+        <nav id="navigation">
+            <section id="nav-sec">
+                <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="#profile-page" data-scroll="home">Home</a></li>
+                    <li><a href="#About-page" data-scroll="about">About</a></li>
+                    <li><a href="#Skills-page" data-scroll="skill">Skills</a></li>
+                    <li><a href="#Experience-page" data-scroll="experience">Experience</a></li>
+                    <li><a href="#Education-page" data-scroll="education">Education</a></li>
+                    <li><a href="#Projects-page" data-scroll="project">Projects</a></li>
+                    <li><a href="#contact" data-scroll="contact">Contact</a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <!-- HERO SECTION WITH IMPROVED BANNER -->
+        <section id="profile-page" class="hero-section">
+            <div class="profile-copy">
+                <p class="eyebrow">Software Engineer • Backend Developer</p>
+                <h1 id="Myname" class="hero-title">I'm <span class="accent-text">Kamalraj</span></h1>
+                <p id="typing-text" class="typing-text"></p>
+                <p class="role-subtitle">Designing elegant solutions with Python, Django, and modern web technologies</p>
+                
+                <ul id="social-media" class="social-links">
+                    <li><a href="https://www.linkedin.com/in/kamalraj2003" target="_blank" rel="noopener noreferrer" onclick="linkedin(event)" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/KAMALRAJ-S" target="_blank" rel="noopener noreferrer" onclick="github(event)" title="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/kamalrajsellamuthu/" target="_blank" rel="noopener noreferrer" onclick="instagram(event)" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                
+                <div id="hire-container" class="cta-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Start a Project</button>
+                    <button class="btn btn-secondary" onclick="download()">Download CV</button>
+                </div>
+            </div>
+
+            <div class="profile-visual">
+                <div class="banner-container">
+                    <div class="banner-circle primary"></div>
+                    <div class="banner-circle secondary"></div>
+                    <div class="banner-accent"></div>
+                    <img id="prof" src="./img/prof.png" alt="Kamalraj - Software Engineer" class="profile-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="About-page" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a <strong>Software Engineer</strong> with 1+ year of professional experience in full-stack development. I specialize in designing and implementing scalable backend systems, REST APIs, and automation solutions that drive business value.</p>
+                        
+                        <p>Currently at <strong>Equiniti India</strong>, I've successfully led the migration of 80+ enterprise reports, engineered automated tools that reduced manual effort by <strong>60-70%</strong>, and tested complex REST API architectures across distributed systems.</p>
+                        
+                        <p>Beyond code, I'm passionate about clean architecture, performance optimization, and mentoring junior developers. I approach every project as an opportunity to learn something new and create meaningful impact.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3>1+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>80+</h3>
+                            <p>Reports Migrated</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>15+</h3>
+                            <p>APIs Tested</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>70%</h3>
+                            <p>Efficiency Gains</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION WITH ANIMATED GLOBE -->
+        <section id="Skills-page" class="skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Interactive 3D globe visualization of my technical expertise - drag to rotate</p>
+                </div>
+                
+                <div class="skills-wrapper">
+                    <div class="skills-globe-container">
+                        <div class="globe-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading 3D Globe...</p>
+                        </div>
+                        <canvas id="skillsGlobe"></canvas>
+                        <div class="globe-hint">💡 Drag to rotate • Mobile: Swipe</div>
+                    </div>
+                    
+                    <div class="skills-legend">
+                        <div class="skill-category" data-category="Languages">
+                            <div class="category-header">
+                                <i class="fas fa-code"></i>
+                                <h3>Languages</h3>
+                            </div>
+                            <p>Python • C# • JavaScript • SQL</p>
+                        </div>
+                        
+                        <div class="skill-category" data-category="Backend">
+                            <div class="category-header">
+                                <i class="fas fa-server"></i>
+                                <h3>Backend</h3>
+                            </div>
+                            <p>Django • .NET • REST APIs • FastAPI</p>
+                        </div>
+                        
+                        <div class="skill-category" data-category="Frontend">
+                            <div class="category-header">
+                                <i class="fas fa-paintbrush"></i>
+                                <h3>Frontend</h3>
+                            </div>
+                            <p>React.js • HTML5 • CSS3 • Responsive Design</p>
+                        </div>
+                        
+                        <div class="skill-category" data-category="Databases">
+                            <div class="category-header">
+                                <i class="fas fa-database"></i>
+                                <h3>Databases</h3>
+                            </div>
+                            <p>MySQL • SQL Server • PostgreSQL</p>
+                        </div>
+                        
+                        <div class="skill-category" data-category="Cloud">
+                            <div class="category-header">
+                                <i class="fas fa-cloud"></i>
+                                <h3>Cloud & DevOps</h3>
+                            </div>
+                            <p>AWS • Docker • Git • CI/CD • Postman</p>
+                        </div>
+                        
+                        <div class="skill-category" data-category="DevOps">
+                            <div class="category-header">
+                                <i class="fas fa-cogs"></i>
+                                <h3>Methodologies</h3>
+                            </div>
+                            <p>Agile • Scrum • SDLC • Test Automation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="Experience-page" class="experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="exp-header">
+                                <h3>Software Engineer (Apprentice)</h3>
+                                <span class="exp-date">Jul 2025 – Jun 2026</span>
+                            </div>
+                            <p class="exp-company">Equiniti India • <span class="company-tag">UK FinTech</span></p>
+                            <ul class="exp-details">
+                                <li>Led migration of 80+ Crystal Reports to Power BI dashboards</li>
+                                <li>Engineered .NET-based automated conversion tool reducing manual effort by 60-70%</li>
+                                <li>Conducted comprehensive REST API testing across 15+ enterprise endpoints</li>
+                                <li>Supported backend development and CI/CD deployment workflows</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="exp-header">
+                                <h3>UI/UX Design Intern</h3>
+                                <span class="exp-date">Feb 2024 – Mar 2024</span>
+                            </div>
+                            <p class="exp-company">KNILA IT Solutions</p>
+                            <ul class="exp-details">
+                                <li>Designed wireframes and high-fidelity prototypes in Figma</li>
+                                <li>Conducted user research and usability testing sessions</li>
+                                <li>Collaborated cross-functionally with product and engineering teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="Education-page" class="education-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+                
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>B.E. Computer Science Engineering</h3>
+                        <p class="edu-institution">K. Ramakrishnan College of Technology</p>
+                        <p class="edu-period">2020 – 2024</p>
+                        <div class="edu-details">
+                            <p><strong>CGPA:</strong> 7.76/10</p>
+                            <p>Specialized in software development, algorithms, system design, database management, and problem-solving through diverse projects and internships.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Relevant Coursework</h3>
+                        <p class="edu-institution">Data Structures • Web Development</p>
+                        <p class="edu-period">Core Competencies</p>
+                        <div class="edu-details">
+                            <ul style="padding-left: 1.2rem;">
+                                <li>Object-Oriented Programming</li>
+                                <li>Database Management Systems</li>
+                                <li>Software Engineering Principles</li>
+                                <li>System Design & Architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="Projects-page" class="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Showcase of my best work</p>
+                </div>
+
+                <div class="projects-container">
+                    <article class="project-card">
+                        <div class="project-badge">AI/ML</div>
+                        <figure class="project-image-wrapper">
+                            <img src="./img/Diabetics retinopathy.JPG" alt="Diabetic Retinopathy Detection Project" class="project-image">
+                        </figure>
+                        <div class="project-content">
+                            <h3 class="project-title">Diabetic Retinopathy Prognosis</h3>
+                            <p class="project-description">Advanced deep learning CNN model that classifies 5 stages of diabetic retinopathy from retinal fundus images with 90%+ accuracy. Built with TensorFlow, featuring modular image processing pipeline.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>CNN</span>
+                                <span>TensorFlow</span>
+                                <span>Image Processing</span>
+                            </div>
+                            <a href="https://github.com/KAMALRAJ-S/ML-BASED-DIABETICS-RETINOPATHY-PROGNOSIS" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-badge">FRONTEND</div>
+                        <figure class="project-image-wrapper">
+                            <img src="./img/Portfolio.JPG" alt="Personal Portfolio Website" class="project-image">
+                        </figure>
+                        <div class="project-content">
+                            <h3 class="project-title">Personal Portfolio Website</h3>
+                            <p class="project-description">Fully responsive, accessible portfolio built with semantic HTML5, modern CSS Grid/Flexbox, and vanilla JavaScript. Achieves sub-2s load times and maintains cross-browser compatibility.</p>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                            </div>
+                            <a href="https://github.com/KAMALRAJ-S/Kamalraj-s-portfolio" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-badge">BACKEND</div>
+                        <figure class="project-image-wrapper project-bg-gradient">
+                            <div class="placeholder-content">
+                                <i class="fas fa-chart-bar"></i>
+                                <p>Enterprise Report Migration</p>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <h3 class="project-title">Report Migration & Automation</h3>
+                            <p class="project-description">Led enterprise-scale migration of 80+ Crystal Reports to Power BI using .NET automation, reducing manual effort by 60-70%. Comprehensive REST API testing across distributed systems.</p>
+                            <div class="tech-tags">
+                                <span>.NET</span>
+                                <span>Power BI</span>
+                                <span>REST APIs</span>
+                                <span>Automation</span>
+                            </div>
+                            <a href="#contact" class="project-link">Get in Touch <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <span class="section-number">06</span>
+                    <h2 class="section-title">Let's Collaborate</h2>
+                    <p class="section-subtitle">I'm always interested in hearing about new projects and opportunities</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info-grid">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <a href="mailto:kamalraj0653@gmail.com">kamalraj0653@gmail.com</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <a href="tel:+918778437808">+91 877 843 7808</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Chennai, India</p>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="c9e4f45d-c6cb-457f-9e25-298f8bc10639">
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <small id="emailError" class="error-message"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                        <p id="successMessage" class="success-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <nav class="footer-nav">
+                    <a href="#profile-page" data-scroll="home">Home</a>
+                    <a href="#About-page" data-scroll="about">About</a>
+                    <a href="#Skills-page" data-scroll="skill">Skills</a>
+                    <a href="#Experience-page" data-scroll="experience">Experience</a>
+                    <a href="#Projects-page" data-scroll="project">Projects</a>
+                </nav>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/kamalraj2003" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/KAMALRAJ-S" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:kamalraj0653@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <p class="footer-credit">&copy; <span id="date"></span> Kamalraj S. Crafted with <span class="heart">❤️</span> by myself.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Three.js Library (Local primary, CDN fallback) -->
+    <script src="./assets/lib/three/three.min.js"></script>
+    <script>
+        // Fallback to CDN if local Three.js fails to load
+        if (typeof THREE === 'undefined') {
+            console.warn('⚠️ Local Three.js failed, loading from CDN...');
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+            script.onload = () => console.log('✅ Three.js loaded from CDN');
+            document.head.appendChild(script);
+        } else {
+            console.log('✅ Three.js loaded from local assets');
+        }
+    </script>
+    <script src="./index.js"></script>
+</body>
+</html>
