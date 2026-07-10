@@ -635,7 +635,7 @@ function email() {
 
 function download() {
     // Update this with your actual resume URL
-    window.open('./assets/Kamalraj_Resume_.pdf', '_blank');
+    window.open('./assets/Kamalraj_resume_.pdf', '_blank');
 }
 
 // ============ UTILITY FUNCTIONS ============
