@@ -635,7 +635,7 @@ function email() {
 
 function download() {
     // Update this with your actual resume URL
-    window.open('https://drive.google.com/file/d/YOUR_RESUME_ID_HERE/view?usp=sharing', '_blank');
+    window.open('./assets/Kamalraj_Resume_.pdf', '_blank');
 }
 
 // ============ UTILITY FUNCTIONS ============
